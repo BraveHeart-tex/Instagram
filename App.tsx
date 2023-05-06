@@ -1,17 +1,19 @@
-import {Text, View} from 'react-native';
-import colors from './src/theme/colors';
-import font from './src/theme/fonts';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import React from 'react';
+import {ScrollView, StyleSheet} from 'react-native';
+import FeedPost from './src/components/FeedPost';
 
 const App = () => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text style={{color: colors.primary, fontSize: font.size.xxlg}}>
-        Hello World!
-        <AntDesign name="stepforward" size={25} />
-      </Text>
-    </View>
+    <ScrollView style={styles.app}>
+      <FeedPost />
+    </ScrollView>
   );
 };
+
+const styles = StyleSheet.create({
+  app: {
+    flex: 1,
+  },
+});
 
 export default App;
